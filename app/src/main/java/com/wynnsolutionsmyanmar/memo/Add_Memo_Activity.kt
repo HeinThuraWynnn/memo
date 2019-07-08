@@ -30,7 +30,7 @@ class Add_Memo_Activity : AppCompatActivity() {
 
     }
 
-    fun  buAdd(view:View){
+    fun btnAdd(view:View){
         var dbManager= DbManager(this)
 
         var values= ContentValues()
