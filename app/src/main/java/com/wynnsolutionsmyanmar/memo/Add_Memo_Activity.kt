@@ -31,24 +31,25 @@ class Add_Memo_Activity : AppCompatActivity() {
         var dbManager= DbManager(this)
 
         var values= ContentValues()
+        values.put("Title",etTitle.text.toString())
+        values.put("Description",etDes.text.toString())
+//         // Get the switch button state programmatically
+//         if(btnEncDec.isChecked){
+//             // If switch button is checked/on then
+//             // The switch is enabled/checked
+//             values.put("Title",etTitle.text.toString())
+//             values.put("Description",etDes.text.toString())
+//             values.put("Date",calendarView.date.toString())
+//             values.put("Status","Encrypt")
 
-        // Get the switch button state programmatically
-        if(btnEncDec.isChecked){
-            // If switch button is checked/on then
-            // The switch is enabled/checked
-            values.put("Title",etTitle.text.toString())
-            values.put("Description",etDes.text.toString())
-            values.put("Date",calendarView.date.toString())
-            values.put("Status","Encrypt")
 
-
-        }else{
-            // The switch is unchecked
-            values.put("Title",etTitle.text.toString())
-            values.put("Description",etDes.text.toString())
-            values.put("Date",calendarView.date.toString())
-            values.put("Status","Decrypt")
-        }
+//         }else{
+//             // The switch is unchecked
+//             values.put("Title",etTitle.text.toString())
+//             values.put("Description",etDes.text.toString())
+//             values.put("Date",calendarView.date.toString())
+//             values.put("Status","Decrypt")
+//         }
 
         if(id==0) {
             val ID = dbManager.Insert(values)
