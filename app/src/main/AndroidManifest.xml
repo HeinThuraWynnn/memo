@@ -11,16 +11,25 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Add_Memo_Activity">
-        </activity>
-        <activity android:name=".passcode">
-        </activity>
-        <activity android:name=".MainActivity">
+        <activity
+                android:name=".Splash_Screen"
+                android:label="@string/title_activity_splash__screen"
+                android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".Login">
+        </activity>
+        <activity android:name=".Create_passcode">
+        </activity>
+        <activity android:name=".Add_Memo_Activity">
+        </activity>
+        <activity android:name=".passcode">
+        </activity>
+        <activity android:name=".MainActivity">
         </activity>
     </application>
 

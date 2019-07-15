@@ -14,4 +14,5 @@
     <string name="titlehint">enter Title</string>
     <string name="des">enter description of note</string>
     <string name="add">Add New</string>
+    <string name="title_activity_splash__screen">Splash_Screen</string>
 </resources>
