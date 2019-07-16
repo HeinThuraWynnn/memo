@@ -12,13 +12,13 @@
             android:text="Add Note"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@android:dimen/app_icon_size"
+            android:textSize="30dp"
             android:id="@+id/textView4" android:layout_marginTop="16dp"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp"/>
     <EditText
-            android:layout_width="254dp"
+            android:layout_width="270dp"
             android:layout_height="49dp"
             android:inputType="textPersonName"
             android:ems="10"
@@ -28,8 +28,8 @@
             android:layout_marginTop="52dp" app:layout_constraintHorizontal_bias="1.0"
             android:hint="@string/titlehint"/>
     <EditText
-            android:layout_width="267dp"
-            android:layout_height="112dp"
+            android:layout_width="270dp"
+            android:layout_height="192dp"
             android:inputType="textMultiLine"
             android:gravity="start|top"
             android:ems="10"
@@ -38,20 +38,6 @@
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/txtDes"
             android:layout_marginStart="8dp" android:layout_marginTop="24dp"
             app:layout_constraintTop_toBottomOf="@+id/etTitle" app:layout_constraintHorizontal_bias="1.0"/>
-    <CalendarView
-            android:layout_width="267dp"
-            android:layout_height="303dp"
-            android:id="@+id/calendarView" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/etDes"
-    />
-    <Switch
-            android:text="Encrypt / Decrypt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnEncDec" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
-            android:layout_marginBottom="16dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/txtDate"
-            app:layout_constraintVertical_bias="0.942"/>
     <TextView
             android:text="Title"
             android:layout_width="wrap_content"
@@ -71,91 +57,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="btnAdd"
-            android:id="@+id/button" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintStart_toEndOf="@+id/btnEncDec" android:layout_marginStart="8dp"
+            android:id="@+id/btnAdd" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="76dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/btnDec"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.916"
             android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/calendarView"
-            app:layout_constraintHorizontal_bias="0.536"/>
-    <TextView
-            android:text="Pick Date"
+            app:layout_constraintVertical_bias="0.51"/>
+    <Button
+            android:text="Encrypt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtDate"
-            app:layout_constraintTop_toBottomOf="@+id/txtDes" android:layout_marginTop="204dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="44dp"/>
+            android:onClick="btnEnc"
+            android:id="@+id/btnEnc" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="76dp"
+            android:layout_marginTop="96dp" app:layout_constraintTop_toBottomOf="@+id/etDes"/>
+    <Button
+            android:text="Decrypt"
+            android:onClick="btnDec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDec" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toEndOf="@+id/btnEnc" android:layout_marginStart="8dp"
+            android:layout_marginTop="96dp" app:layout_constraintTop_toBottomOf="@+id/etDes"
+            app:layout_constraintHorizontal_bias="0.384"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-<!--<EditText-->
-<!--android:id="@+id/etTitle"-->
-<!--android:layout_width="wrap_content"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:ems="10"-->
-<!--android:hint="@string/titlehint"-->
-<!--android:inputType="textPersonName"-->
-<!--app:layout_constraintEnd_toEndOf="parent"-->
-<!--app:layout_constraintLeft_toLeftOf="parent"-->
-<!--app:layout_constraintRight_toRightOf="parent"-->
-<!--app:layout_constraintStart_toStartOf="parent"-->
-<!--app:layout_constraintBottom_toTopOf="@+id/date" android:layout_marginBottom="40dp"/>-->
-
-<!--<EditText-->
-<!--android:id="@+id/etDes"-->
-<!--android:layout_width="306dp"-->
-<!--android:layout_height="154dp"-->
-<!--android:ems="10"-->
-<!--android:hint="@string/des"-->
-<!--android:inputType="textMultiLine"-->
-<!--app:layout_constraintLeft_toLeftOf="parent"-->
-<!--app:layout_constraintRight_toRightOf="parent"-->
-<!--android:layout_marginTop="28dp"-->
-<!--app:layout_constraintTop_toBottomOf="@+id/editText" app:layout_constraintEnd_toEndOf="parent"-->
-<!--app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.504"/>-->
-
-<!--<Button-->
-<!--android:id="@+id/button"-->
-<!--android:layout_width="151dp"-->
-<!--android:layout_height="45dp"-->
-<!--android:layout_marginBottom="104dp"-->
-<!--android:layout_marginEnd="52dp"-->
-<!--android:background="@drawable/bublue_color"-->
-<!--android:onClick="btnAdd"-->
-<!--android:text="@string/add"-->
-<!--app:layout_constraintBottom_toBottomOf="parent"-->
-<!--app:layout_constraintEnd_toEndOf="parent"/>-->
-<!--<EditText-->
-<!--android:layout_width="wrap_content"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:inputType="date"-->
-<!--android:ems="10"-->
-<!--tools:layout_editor_absoluteY="163dp"-->
-<!--app:layout_constraintEnd_toEndOf="parent" android:id="@+id/editText"-->
-<!--android:layout_marginEnd="52dp" style="@style/Widget.AppCompat.Light.AutoCompleteTextView"-->
-<!--android:singleLine="false"/>-->
-<!--<TextView-->
-<!--android:text="Pick Date"-->
-<!--android:layout_width="wrap_content"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:id="@+id/date" app:layout_constraintEnd_toStartOf="@+id/editText"-->
-<!--android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"-->
-<!--android:layout_marginStart="8dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"-->
-<!--app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.45"-->
-<!--app:layout_constraintVertical_bias="0.248"/>-->
-<!--<TextView-->
-<!--android:text="Add Note"-->
-<!--android:layout_width="wrap_content"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:id="@+id/textView3" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"-->
-<!--app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"-->
-<!--app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"-->
-<!--app:layout_constraintBottom_toTopOf="@+id/etTitle"/>-->
-<!--<Switch-->
-<!--android:text="Encrypt/Decrypt"-->
-<!--android:layout_width="wrap_content"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:id="@+id/cryptStatus" app:layout_constraintStart_toStartOf="parent"-->
-<!--android:layout_marginStart="52dp"-->
-<!--app:layout_constraintEnd_toStartOf="@+id/button" android:layout_marginEnd="8dp"-->
-<!--app:layout_constraintHorizontal_bias="0.125" android:layout_marginTop="200dp"-->
-<!--app:layout_constraintTop_toBottomOf="@+id/etDes" android:layout_marginBottom="8dp"-->
-<!--app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.018"/>-->

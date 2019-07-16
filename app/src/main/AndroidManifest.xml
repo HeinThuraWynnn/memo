@@ -13,7 +13,6 @@
             tools:ignore="GoogleAppIndexingWarning">
         <activity
                 android:name=".Splash_Screen"
-                android:label="@string/title_activity_splash__screen"
                 android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
